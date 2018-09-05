@@ -129,7 +129,7 @@ wwv_flow_api.create_plugin (
  ,p_validation_function => 'validate_email_address'
  ,p_standard_attributes => 'VISIBLE:SESSION_STATE:READONLY:SOURCE:ELEMENT:WIDTH'
  ,p_substitute_attributes => true
- ,p_version_identifier => '0.1'
+ ,p_version_identifier => '0.1.1'
   );
 wwv_flow_api.create_plugin_attribute (
   p_id => 3606590044505804946 + wwv_flow_api.g_id_offset
@@ -159,7 +159,7 @@ wwv_flow_api.create_plugin_attribute (
  ,p_is_translatable => false
  ,p_help_text => 'By default the plugin will match against a standard pattern. If you want to use your own then add it here.'||unistr('\000a')||
 'The default is '||unistr('\000a')||
-'^[a-zA-Z0-9]{1}[a-zA-Z0-9\.\-]{1,}@[a-zA-Z0-9]{1}[a-zA-Z0-9\.\-]{1,}\.{1}[a-zA-Z]{2,4}$'
+'^[a-zA-Z0-9'']{1}[a-zA-Z0-9''\.\-]{1,}@[a-zA-Z0-9'']{1}[a-zA-Z0-9\.\-]{1,}\.{1}[a-zA-Z]{2,4}$'
   );
 null;
  
