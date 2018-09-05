@@ -98,7 +98,7 @@ wwv_flow_api.create_plugin (
 'sult apex_plugin.t_page_item_validation_result;'||unistr('\000a')||
 '  l_single_address VARCHAR2(1) := nvl(p_item.attribute_01, ''Y'');'||unistr('\000a')||
 '  l_bad_addresses  VARCHAR2(4000);'||unistr('\000a')||
-'  l_email_regex varchar2(4000) := nvl(p_item.attribute_02, ''^[a-zA-Z0-9]{1}[a-zA-Z0-9\.\-]{1,}@[a-zA-Z0-9]{1}[a-zA-Z0-9\.\-]{1,}\.{1}[a-zA-Z]{2,4}$'');'||unistr('\000a')||
+'  l_email_regex varchar2(4000) := nvl(p_item.attribute_02, ''^[a-zA-Z0-9'']{1}[a-zA-Z0-9\.\-]{1,}@[a-zA-Z0-9'']{1}[a-zA-Z0-9\.\-]{1,}\.{1}[a-zA-Z]{2,4}$'');'||unistr('\000a')||
 'BEGIN'||unistr('\000a')||
 '  IF l_single_address = ''Y'' THEN --Restricted to single address'||unistr('\000a')||
 '    IF NOT REGEXP_LIKE(p_value,'||
